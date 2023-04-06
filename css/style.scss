@@ -8,6 +8,7 @@
 }
 body{
     background-color: hsl(233, 47%, 7%);
+    
     a{
         text-decoration: none;
         color: white;
@@ -15,10 +16,11 @@ body{
 }
 .global{
     display: flex;
-    max-width: 1440px;
-    margin: 30px;
+    max-width: 1015px;
+    margin: 0 auto;
     background-color: hsl(244, 38%, 16%);
     border-radius: 15px;
+    z-index: 1;
     .text{
         margin: 50px;
         display: flex;
@@ -37,6 +39,7 @@ body{
         .small_text{
             
             color: rgb(124, 124, 124);
+            padding-bottom: 130px;
             
         }
         .peoples{
@@ -47,19 +50,33 @@ body{
     .picture{
         display: flex;
         
-        .images{
-            position: relative;
-            width: 540;
-            height: 450;
+        .image{
+            display: flex;
             flex-shrink: 1;
+            background-image: url(../images/image-header-desktop.jpg);
+            max-width: 100%;
+            margin: 0 auto;
             z-index: 0;
         }
-        .background{
-            
-            width: 540;
-            height: 450;
+        .image_background{
+           
             background-color:hsl(277, 64%, 61%);
             z-index: 1;
         }
+    }
+}
+@media screen and (max-width:600px) {
+    .global{
+        flex-direction: column-reverse;
+        
+    }
+    .peoples{
+        flex-direction: column;
+    }
+    .text{
+        text-align: center;
+    }
+    .image{
+        background-image: url(../images/image-header-mobile.jpg);
     }
 }
