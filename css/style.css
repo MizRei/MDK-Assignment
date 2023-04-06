@@ -79,8 +79,6 @@ body a {
   max-width: 100%;
   margin: 0 auto;
   z-index: 0;
-  -webkit-filter: sepia();
-          filter: sepia();
 }
 
 @media screen and (max-width: 600px) {
