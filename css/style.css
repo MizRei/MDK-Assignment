@@ -23,7 +23,7 @@ body a {
   margin: 0 auto;
   background-color: hsl(244deg, 38%, 16%);
   border-radius: 15px;
-  z-index: 1;
+  margin-top: 80px;
 }
 .global .text {
   margin: 50px;
@@ -58,25 +58,27 @@ body a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.global .text .peoples .bolded_text {
+  font-weight: bold;
+}
+.global .text .peoples .bolded_text .grey_text {
+  color: grey;
+}
 .global .picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.global .picture .image {
+.global .picture .images .image {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-negative: 1;
       flex-shrink: 1;
-  background-image: url(../images/image-header-desktop.jpg);
   max-width: 100%;
   margin: 0 auto;
   z-index: 0;
-}
-.global .picture .image_background {
-  background-color: hsl(277deg, 64%, 61%);
-  z-index: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -85,6 +87,7 @@ body a {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    margin: 80px;
   }
   .peoples {
     -webkit-box-orient: vertical;
@@ -94,8 +97,5 @@ body a {
   }
   .text {
     text-align: center;
-  }
-  .image {
-    background-image: url(../images/image-header-mobile.jpg);
   }
 }

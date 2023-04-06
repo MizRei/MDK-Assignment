@@ -20,7 +20,8 @@ body{
     margin: 0 auto;
     background-color: hsl(244, 38%, 16%);
     border-radius: 15px;
-    z-index: 1;
+    margin-top: 80px;
+    
     .text{
         margin: 50px;
         display: flex;
@@ -45,38 +46,38 @@ body{
         .peoples{
             display: flex;
             justify-content: space-between; 
+            .bolded_text{
+                font-weight: bold;
+                .grey_text{
+                    color: grey;
+                    
+                }
+            }
         }
     }
     .picture{
         display: flex;
-        
-        .image{
-            display: flex;
-            flex-shrink: 1;
-            background-image: url(../images/image-header-desktop.jpg);
-            max-width: 100%;
-            margin: 0 auto;
-            z-index: 0;
-        }
-        .image_background{
-           
-            background-color:hsl(277, 64%, 61%);
-            z-index: 1;
+        .images{
+            .image{
+                position: relative;
+                display: flex;
+                flex-shrink: 1;
+                max-width: 100%;
+                margin: 0 auto;
+                z-index: 0;
+            }
         }
     }
 }
 @media screen and (max-width:600px) {
     .global{
         flex-direction: column-reverse;
-        
+        margin: 80px;
     }
     .peoples{
         flex-direction: column;
     }
     .text{
         text-align: center;
-    }
-    .image{
-        background-image: url(../images/image-header-mobile.jpg);
     }
 }
